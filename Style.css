@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightcyan;
+}
+
+/* Navigation */
+nav {
+    background: #30336b;
+    color: white;
+    padding: 12px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h2 {
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    font-size: 28px;
+}
+
+nav .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav .menu ul a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav .menu ul a:hover {
+    color: wheat;
+}
+
+
+/* Container */
+.container {
+    padding-inline: 20px;
+    margin-block: 50px;
+    padding: 20px;
+}
+
+.color-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.color-container .colorbox {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    background-color: darkcyan;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.color-container .colorbox h2 {
+    font-size: 35px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+}
+
+.color-container .colorbox input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 8px;
+    font-size: 18px;
+}
+
+/* footer */
+footer{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: darkcyan;
+    color: white;
+    font-size: 35px;
+    height: 30vh;
+}
+
+@media (max-width: 400px) {
+    nav h2 {
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        font-size: 22px;
+    }
+
+    nav .menu ul a {
+        font-size: 18px;
+    }
+
+    .color-container .colorbox h2 {
+        font-size: 25px;
+    }
+
+    .container {
+        padding-inline: 10px;
+        margin-block: 30px;
+        padding: 10px;
+    }
+
+    .color-container {
+        gap: 20px;
+    }
+    .color-container .colorbox input {
+        font-size: 16px;
+    }
+    footer{
+        font-size: 22px;
+        height: 20vh;
+    }
+}
+
+@media (max-width: 250px) {
+    .color-container .colorbox input {
+        width: 100%;
+    }
+}
