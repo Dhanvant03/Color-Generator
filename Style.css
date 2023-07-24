@@ -17,6 +17,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 1s;
 }
 
 nav h2 {
@@ -70,6 +71,7 @@ nav .menu ul a:hover {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    transition: 1s;
 }
 
 .color-container .colorbox h2 {
@@ -91,13 +93,40 @@ nav .menu ul a:hover {
     font-size: 18px;
 }
 
+.color-container .button-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(255,255,255,0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.color-container .button-box button{
+    padding: 5px 8px;
+    border: none;
+    background: darkorchid;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+.color-container .button-box button:hover{
+    background: rgb(134, 39, 182);
+}
+
 /* footer */
 footer{
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: darkcyan;
+    background: #535c68;
     color: white;
     font-size: 35px;
     height: 30vh;

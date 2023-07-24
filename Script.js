@@ -10,30 +10,51 @@ const changecolor = () => {
 };
 changecolor();
 
-// Div 1 ColorGenerator App
+// Div 1 ColorGenerator App-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const div1El = document.getElementById('div-1');
-const h2El = document.querySelector('.colorbox h2');
+const div2H2El = document.querySelector('.colorbox h2');
 
 function div1ColorGenerator() {
-    const colorStr = 'abcdef0123456789'
+    const colorStr = 'ABCDEF0123456789'
     let color = "#";
     setInterval(() => {
         color = "#"
         for (let i = 0; i < 6; i++) {
             const makeColor = Math.floor(Math.random() * colorStr.length);
             color += colorStr[makeColor];
-            div1El.style.background = color
-            h2El.innerHTML = color;
+            div1El.style.background = color;
+            div2H2El.innerHTML = color;
         }
     }, 3000);
 }
 div1ColorGenerator();
 
 
-// Div 1 ColorGenerator App
+// Div 2 ColorGenerator App---------------------------------------------------------------------------------------------
 const div2El = document.getElementById('div-2');
 const inputEl = document.querySelector('.colorbox input');
 
 inputEl.addEventListener('input', () => {
     div2El.style.background = inputEl.value;
 });
+
+// Div 3 ColorGenerator App----------------------------------------------------------------------------------------------
+
+const div3El = document.getElementById('div-3');
+const div3H2El = document.getElementById('div3-h2');
+const nextBtnEl = document.getElementById('btn');
+
+function div3ColorGenerator() {
+    const colorStr = 'ABCDEF0123456789'
+    let color;
+    color = "#"
+    for (let i = 0; i < 6; i++) {
+        const makeColor = Math.floor(Math.random() * colorStr.length);
+        color += colorStr[makeColor];
+        div3El.style.background = color;
+        div3H2El.innerText = color;
+    }
+}
+div3ColorGenerator();
+
+nextBtnEl.addEventListener('click', div3ColorGenerator);
